@@ -1,0 +1,15 @@
+@mixin create-btn($type, $bg,$bg-hover, $color){
+  display: inline-flex;
+  width: auto;
+  height: if($type==1, 40px, 50px);
+  align-items: center;
+  padding: 0 38px;
+  border: if($type==2, none, 2px solid $divider);
+  background-color: $bg;
+  color:$color;
+  transition: all 300ms linear;
+  &:hover{
+    background-color: $bg-hover;
+    border: if($type==2, none, 2px solid $gray1);
+}
+}
